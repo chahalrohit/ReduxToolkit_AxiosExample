@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import {FlatList, Text, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import styles from './GetExample.styles';
+import Header from '../../components/common/Header';
 
 interface ITEM {
   id: number;
@@ -60,6 +61,7 @@ const GetExample: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Header title="Get" />
       <FlatList
         data={data}
         renderItem={renderItem}

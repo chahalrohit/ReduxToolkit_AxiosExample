@@ -5,6 +5,8 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {moderateScale, scale, verticalScale} from 'react-native-size-matters';
 import Icon from 'react-native-vector-icons/AntDesign';
 import styles from './PostExample.styles';
+import Header from '../../components/common/Header';
+import Button from '../../components/common/Button';
 
 const genderType = [
   {label: 'Male', value: 'male'},
@@ -47,6 +49,7 @@ const GetExample: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Header title="Post" />
       <TextInput
         style={{
           marginHorizontal: scale(10),
@@ -132,6 +135,7 @@ const GetExample: React.FC = () => {
           value={isEnabled}
         />
       </View>
+      <Button name="Submit" extStyles={{marginTop: scale(25)}} />
     </SafeAreaView>
   );
 };

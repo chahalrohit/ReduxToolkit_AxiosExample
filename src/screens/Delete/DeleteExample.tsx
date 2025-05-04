@@ -5,6 +5,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {scale} from 'react-native-size-matters';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import styles from './DeleteExample.styles';
+import Header from '../../components/common/Header';
 
 interface ITEM {
   id: number;
@@ -69,6 +70,7 @@ const DeleteExample: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Header title="Delete" />
       <FlatList
         data={data}
         renderItem={renderItem}
